@@ -7,16 +7,11 @@
 //Teste larissa
 
 int main() {
-    char nome[20];
-    char codigo[10];
-    int população;
-    float area;
-    float pib;
-    int pontoTurisco;
+    printf("Desafio do jogo trunfo!");
 
-    
 
-}
+
+
     // Sugestão: Defina variáveis separadas para cada atributo da cidade.
     // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
     
