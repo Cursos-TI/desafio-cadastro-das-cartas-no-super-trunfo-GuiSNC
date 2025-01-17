@@ -8,7 +8,7 @@
 
 int main() {
     printf("Desafio do jogo trunfo!");
-
+    
 
 
 
