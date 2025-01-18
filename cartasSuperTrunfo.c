@@ -1,37 +1,44 @@
 #include <stdio.h>
 
 int main(){
-    char cidade[20];
-    float codigopostal;
+    char estado;
+    char cidade;
+    char codigodacarta;
     int populacao;
     float area;
     float pib;
     int pontosturisticos;
 
-    printf("A1\n");
-    printf("- Cidade: São Paulo\n- Codigo Postal: 01153-000\n- População: 11.895.578\n- Área:1.523 km² \n- PIB: R$ 828,98 bilhões \n- Pontos Turísticos: 36  \n");
+    printf("Digite o Estado: %c");
+    scanf("%c", &estado);
 
-    printf("\nA2\n");
-    printf("\n- Cidade: Goiânia \n- Codigo Postal: 72800-000 \n- População: 2.654.860 \n- Área: 728,8 km² \n- PIB: R$ 8,149 bilhões \n- Pontos Turísticos: 42 \n");
-
-    printf("\nA3\n");
-    printf("\n- Cidade: Rio Janeiro \n- Codigo Postal: 20230-010 \n- População: 6.211.000 \n- Área: 1.200 km² \n- PIB: R$ 37,784 bilhões  \n- Pontos Turísticos: 58 \n");
-    
-    printf("\nA4\n");
-    printf("\n- Cidade: Porto Alegre \n- Codigo Postal: 90010-420 \n- População: 1,333 milhões \n- Área: 496,8 km² \n- PIB: R$ 9,787 bilhões  \n- Pontos Turísticos: 40 \n");
-
-
-
-
-    
+    print("Digite o nome da Cidade: %s");
     scanf("%s", &cidade);
-    scanf("%d", &codigopostal);
+
+    printf("Digite o Codigo de Carta: % c\n");
+    scanf("% c", &codigodacarta);
+
+    printf("Digite a população: %d");
     scanf("%d", &populacao);
+
+    printf("Digite a Área: %f");
     scanf("%f", &area);
+
+    printf("Digite o PIB: %f");
     scanf("%f", &pib);
+
+    printf("Digite os Pontos Turisticos: %d");
     scanf("%d", &pontosturisticos);
 
-
+    printf("Estado: %c\n", estado);
+    printf("Cidade: %s", cidade);
+    printf("Codigo da Carta: %c", codigodacarta);
+    printf("População: %d", populacao);
+    printf("Área: %.3f", area);
+    printf("PIB: %.2f", pib);
+    printf("Pontos Turisticos: %d", pontosturisticos);
+    
+    
     return 0;
 
 
