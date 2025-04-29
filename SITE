@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazolé - Clareador de Manchas para Acne, Axilas, Virilhas e Melasma</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+        .before-after-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            border-radius: 12px;
+        }
+        .before-after-slider {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 50%;
+            left: 0;
+            right: 0;
+            background-color: rgba(255,255,255,0.3);
+            border-right: 2px dashed white;
+            cursor: ew-resize;
+        }
+        .guarantee-badge {
+            clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%);
+        }
+        .floating-button {
+            box-shadow: 0 10px 25px -5px rgba(76, 181, 67, 0.4);
+        }
+        .sticky-banner {
+            position: sticky;
+            bottom: 0;
+            z-index: 40;
+        }
+        .problem-card {
+            transition: all 0.3s ease;
+        }
+        .problem-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center text-white font-bold text-xl mr-2">A</div>
+                <span class="text-xl font-bold text-purple-800">AMAZOLÉ</span>
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#beneficios" class="text-gray-700 hover:text-purple-600 transition">Benefícios</a>
+                <a href="#problemas" class="text-gray-700 hover:text-purple-600 transition">Problemas</a>
+                <a href="#como-usar" class="text-gray-700 hover:text-purple-600 transition">Como Usar</a>
+                <a href="#depoimentos" class="text-gray-700 hover:text-purple-600 transition">Depoimentos</a>
+                <a href="#garantia" class="text-gray-700 hover:text-purple-600 transition">Garantia</a>
+            </div>
+            <button class="md:hidden text-gray-700">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-purple-50 to-pink-50 py-12 md:py-20">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                <span class="bg-purple-100 text-purple-800 px-4 py-1 rounded-full text-sm font-semibold mb-3 inline-block">NOVO LANÇAMENTO</span>
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Diga adeus às manchas com <span class="text-purple-600">Amazolé</span></h1>
+                <p class="text-lg text-gray-600 mb-6">O clareador de manchas mais avançado do mercado, formulado com ingredientes naturais para eliminar manchas de acne, axilas, virilhas e melasma em apenas 14 dias.</p>
+                
+                <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center text-purple-600 mr-3">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <span class="font-semibold">Resultados visíveis em 14 dias</span>
+                    </div>
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center text-purple-600 mr-3">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <span class="font-semibold">Seguro para todos os tipos de pele</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center text-purple-600 mr-3">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <span class="font-semibold">Clareia até mesmo melasmas antigos</span>
+                    </div>
+                </div>
+
+                <div class="flex flex-col sm:flex-row items-start sm:items-center space-y-3 sm:space-y-0 sm:space-x-4">
+                    <a href="#oferta" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-lg transition duration-300 text-center w-full sm:w-auto pulse-animation">
+                        QUERO CLAREAR MINHAS MANCHAS
+                    </a>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-yellow-100 rounded-full flex items-center justify-center text-yellow-600 mr-2">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <span class="text-sm text-gray-600">Compra 100% segura</span>
+                    </div>
+                </div>
+            </div>
+            <div class="md:w-1/2 relative">
+                <div class="relative bg-white p-2 rounded-xl shadow-xl">
+                    <img src="https://images.unsplash.com/photo-1596755094514-87a40ffb3a5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Amazolé Clareador de Manchas" class="rounded-lg w-full">
+                    <div class="absolute -bottom-5 -right-5 bg-yellow-400 text-black font-bold py-2 px-4 rounded-lg transform rotate-6">
+                        <span class="block text-sm">OFERTA POR TEMPO LIMITADO</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problems Section -->
+    <section id="problemas" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Problemas que o <span class="text-purple-600">Amazolé</span> resolve</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Manchas na pele podem afetar sua autoestima e confiança. Amazolé foi desenvolvido para clarear os principais tipos de manchas que incomodam homens e mulheres.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="problem-card bg-gray-50 rounded-xl p-6 border border-gray-100">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center text-purple-600 mb-4">
+                        <i class="fas fa-face-frown text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Manchas de Acne</h3>
+                    <p class="text-gray-600">Elimina as marcas escuras deixadas pela acne, uniformizando o tom da pele.</p>
+                </div>
+                <div class="problem-card bg-gray-50 rounded-xl p-6 border border-gray-100">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center text-purple-600 mb-4">
+                        <i class="fas fa-tshirt text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Axilas Escuras</h3>
+                    <p class="text-gray-600">Clareia axilas escuras causadas por depilação, desodorantes ou atrito.</p>
+                </div>
+                <div class="problem-card bg-gray-50 rounded-xl p-6 border border-gray-100">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center text-purple-600 mb-4">
+                        <i class="fas fa-user text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Virilhas Escuras</h3>
+                    <p class="text-gray-600">Reduz a pigmentação escura na região íntima, devolvendo a cor natural.</p>
+                </div>
+                <div class="problem-card bg-gray-50 rounded-xl p-6 border border-gray-100">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center text-purple-600 mb-4">
+                        <i class="fas fa-sun text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Melasma</h3>
+                    <p class="text-gray-600">Ação comprovada no clareamento de melasmas, mesmo os mais resistentes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Before & After Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Resultados reais com <span class="text-purple-600">Amazolé</span></h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Veja a transformação na pele de pessoas que usaram Amazolé por apenas 30 dias.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="before-after-container">
+                    <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Antes" class="w-full">
+                    <div class="before-after-slider"></div>
+                    <div class="absolute top-4 left-4 bg-white px-3 py-1 rounded-full font-bold text-sm">ANTES</div>
+                    <div class="absolute top-4 right-4 bg-white px-3 py-1 rounded-full font-bold text-sm">DEPOIS</div>
+                </div>
+                <div class="before-after-container">
+                    <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Antes" class="w-full">
+                    <div class="before-after-slider"></div>
+                    <div class="absolute top-4 left-4 bg-white px-3 py-1 rounded-full font-bold text-sm">ANTES</div>
+                    <div class="absolute top-4 right-4 bg-white px-3 py-1 rounded-full font-bold text-sm">DEPOIS</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="beneficios" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Por que escolher <span class="text-purple-600">Amazolé</span>?</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Diferentes dos clareadores comuns, Amazolé foi desenvolvido com tecnologia avançada para oferecer resultados rápidos e duradouros.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-purple-50 rounded-xl p-8 text-center">
+                    <div class="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center text-purple-600 mx-auto mb-6">
+                        <i class="fas fa-bolt text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Ação Rápida</h3>
+                    <p class="text-gray-600">Resultados visíveis já nas primeiras semanas de uso, com clareamento completo em 30 dias.</p>
+                </div>
+                <div class="bg-purple-50 rounded-xl p-8 text-center">
+                    <div class="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center text-purple-600 mx-auto mb-6">
+                        <i class="fas fa-leaf text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Ingredientes Naturais</h3>
+                    <p class="text-gray-600">Fórmula com extratos botânicos e vitaminas que clareiam sem agredir a pele.</p>
+                </div>
+                <div class="bg-purple-50 rounded-xl p-8 text-center">
+                    <div class="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center text-purple-600 mx-auto mb-6">
+                        <i class="fas fa-flask text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Tecnologia Avançada</h3>
+                    <p class="text-gray-600">Nanotecnologia que leva os ativos clareadores diretamente às camadas profundas da pele.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Use Section -->
+    <section id="como-usar" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Como usar o <span class="text-purple-600">Amazolé</span></h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Siga estas simples instruções para obter os melhores resultados.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="flex flex-col items-center text-center">
+                    <div class="w-24 h-24 bg-purple-100 rounded-full flex items-center justify-center text-purple-600 mb-4 text-4xl font-bold">1</div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Limpe a área</h3>
+                    <p class="text-gray-600">Lave e seque bem a região onde será aplicado o produto.</p>
+                </div>
+                <div class="flex flex-col items-center text-center">
+                    <div class="w-24 h-24 bg-purple-100 rounded-full flex items-center justify-center text-purple-600 mb-4 text-4xl font-bold">2</div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Aplique o produto</h3>
+                    <p class="text-gray-600">Com os dedos limpos, aplique uma fina camada sobre as manchas.</p>
+                </div>
+                <div class="flex flex-col items-center text-center">
+                    <div class="w-24 h-24 bg-purple-100 rounded-full flex items-center justify-center text-purple-600 mb-4 text-4xl font-bold">3</div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Deixe agir</h3>
+                    <p class="text-gray-600">Não enxágue. Use 2 vezes ao dia para melhores resultados.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="depoimentos" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">O que dizem sobre o <span class="text-purple-600">Amazolé</span></h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Depoimentos reais de clientes que transformaram sua pele com nosso produto.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 rounded-xl p-6">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Ana Clara" class="w-12 h-12 rounded-full mr-3">
+                        <div>
+                            <h4 class="font-bold">Ana Clara</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Minhas manchas de acne sumiram em apenas 3 semanas! Não acreditava que funcionaria tão bem. Recomendo demais!"</p>
+                </div>
+                <div class="bg-gray-50 rounded-xl p-6">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Carlos Eduardo" class="w-12 h-12 rounded-full mr-3">
+                        <div>
+                            <h4 class="font-bold">Carlos Eduardo</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Minhas axilas sempre foram muito escuras e eu tinha vergonha de usar regata. Com Amazolé, em 1 mês já vi uma diferença enorme!"</p>
+                </div>
+                <div class="bg-gray-50 rounded-xl p-6">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Juliana" class="w-12 h-12 rounded-full mr-3">
+                        <div>
+                            <h4 class="font-bold">Juliana</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Depois de anos tentando clarear meu melasma com vários produtos, finalmente encontrei algo que realmente funciona. Minha autoestima melhorou 100%!"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guarantee Section -->
+    <section id="garantia" class="py-16 bg-purple-600 text-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <h2 class="text-3xl font-bold mb-4">Garantia de Satisfação</h2>
+                    <p class="text-lg mb-6">Se em 30 dias você não notar diferença no clareamento das suas manchas, devolvemos 100% do seu dinheiro. Sem perguntas, sem burocracia.</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-purple-600 mr-4">
+                            <i class="fas fa-lock text-xl"></i>
+                        </div>
+                        <span class="font-semibold">Compra 100% segura</span>
+                    </div>
+                </div>
+                <div class="md:w-1/2 relative">
+                    <div class="bg-white text-purple-800 rounded-xl p-8 shadow-lg max-w-md mx-auto">
+                        <div class="absolute -top-8 left-1/2 transform -translate-x-1/2">
+                            <div class="guarantee-badge bg-yellow-400 text-black font-bold py-3 px-6 text-center">
+                                <span class="block text-sm">GARANTIA</span>
+                                <span class="block text-xl">30 DIAS</span>
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-center">Experimente sem risco</h3>
+                        <p class="text-gray-700 mb-6">Estamos tão confiantes nos resultados do Amazolé que oferecemos esta garantia incondicional. Se não gostar, basta nos avisar e devolveremos seu dinheiro.</p>
+                        <div class="flex items-center justify-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2 text-xl"></i>
+                            <span class="font-semibold">Sem letras miúdas</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Offer Section -->
+    <section id="oferta" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl p-8 md:p-12 shadow-lg">
+                <div class="flex flex-col md:flex-row">
+                    <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                        <h2 class="text-3xl font-bold text-gray-800 mb-4">Oferta Especial</h2>
+                        <p class="text-lg text-gray-600 mb-6">Adquira agora o Amazolé com desconto por tempo limitado e comece a clarear suas manchas hoje mesmo!</p>
+                        
+                        <div class="bg-white rounded-lg p-6 mb-6">
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="font-semibold">Kit Básico (1 unidade)</span>
+                                <span class="text-gray-500 line-through">R$ 129,90</span>
+                            </div>
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="font-semibold">Kit Completo (3 unidades)</span>
+                                <span class="text-gray-500 line-through">R$ 389,70</span>
+                            </div>
+                            <div class="border-t border-gray-200 pt-4">
+                                <div class="flex justify-between items-center">
+                                    <span class="font-bold text-lg">HOJE:</span>
+                                    <span class="font-bold text-purple-600 text-xl">R$ 297,00</span>
+                                </div>
+                                <div class="text-sm text-gray-500 text-right">Economize R$ 92,70</div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center mb-6">
+                            <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center text-green-600 mr-3">
+                                <i class="fas fa-truck"></i>
+                            </div>
+                            <span class="text-gray-600">Frete grátis para todo Brasil</span>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2">
+                        <div class="bg-white rounded-lg p-6 border border-purple-200">
+                            <h3 class="text-xl font-bold text-center mb-6">Preencha o formulário</h3>
+                            <form>
+                                <div class="mb-4">
+                                    <label class="block text-gray-700 mb-2" for="name">Nome Completo</label>
+                                    <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+                                </div>
+                                <div class="mb-4">
+                                    <label class="block text-gray-700 mb-2" for="email">E-mail</label>
+                                    <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+                                </div>
+                                <div class="mb-6">
+                                    <label class="block text-gray-700 mb-2" for="phone">WhatsApp</label>
+                                    <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+                                </div>
+                                <button type="submit" class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-4 rounded-lg transition duration-300">
+                                    QUERO CLAREAR MINHAS MANCHAS
+                                </button>
+                            </form>
+                            <div class="mt-4 flex items-center justify-center">
+                                <img src="https://www.pngkey.com/png/full/13-139812_secure-payment-logo-png.png" alt="Pagamento seguro" class="h-8">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4 max-w-3xl">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Perguntas Frequentes</h2>
+            
+            <div class="space-y-4">
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <button class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                        <span class="font-semibold text-gray-800">Quanto tempo demora para ver resultados?</span>
+                        <i class="fas fa-chevron-down text-purple-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="px-6 pb-6 hidden">
+                        <p class="text-gray-600">A maioria dos usuários começa a notar diferença no clareamento das manchas após 14 dias de uso contínuo. Para resultados completos, recomendamos o uso por pelo menos 30 dias.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <button class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                        <span class="font-semibold text-gray-800">Posso usar no rosto e no corpo?</span>
+                        <i class="fas fa-chevron-down text-purple-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="px-6 pb-6 hidden">
+                        <p class="text-gray-600">Sim! Amazolé foi formulado para ser seguro tanto no rosto quanto no corpo. Pode ser usado em axilas, virilhas, joelhos, cotovelos e qualquer área com manchas.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <button class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                        <span class="font-semibold text-gray-800">Tem algum efeito colateral?</span>
+                        <i class="fas fa-chevron-down text-purple-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="px-6 pb-6 hidden">
+                        <p class="text-gray-600">Amazolé é formulado com ingredientes naturais e não causa efeitos colaterais na maioria das pessoas. Em peles muito sensíveis, pode ocorrer leve vermelhidão que desaparece rapidamente.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <button class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                        <span class="font-semibold text-gray-800">Como faço para devolver se não gostar?</span>
+                        <i class="fas fa-chevron-down text-purple-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="px-6 pb-6 hidden">
+                        <p class="text-gray-600">Basta nos enviar um e-mail para suporte@amazole.com dentro do prazo de 30 dias e enviar o produto de volta. O reembolso será processado imediatamente após o recebimento.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-8 md:mb-0">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center text-white font-bold text-xl mr-2">A</div>
+                        <span class="text-xl font-bold">AMAZOLÉ</span>
+                    </div>
+                    <p class="text-gray-400 max-w-xs">O clareador de manchas mais avançado do mercado, para uma pele uniforme e radiante.</p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                    <div>
+                        <h4 class="font-bold text-lg mb-4">Institucional</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Sobre Nós</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Política de Privacidade</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Termos de Uso</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg mb-4">Ajuda</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Central de Ajuda</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Entre em Contato</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Trocas e Devoluções</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg mb-4">Contato</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-center">
+                                <i class="fas fa-envelope mr-2 text-purple-400"></i>
+                                <span class="text-gray-400">contato@amazole.com</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-phone-alt mr-2 text-purple-400"></i>
+                                <span class="text-gray-400">(11) 1234-5678</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-map-marker-alt mr-2 text-purple-400"></i>
+                                <span class="text-gray-400">São Paulo, SP</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2023 Amazolé. Todos os direitos reservados.</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <div class="sticky-banner">
+        <div class="bg-green-500 text-white py-3 px-6 flex justify-between items-center">
+            <div class="flex items-center">
+                <i class="fab fa-whatsapp text-2xl mr-3"></i>
+                <div>
+                    <p class="font-bold">Fale conosco</p>
+                    <p class="text-sm">Tire suas dúvidas no WhatsApp</p>
+                </div>
+            </div>
+            <a href="https://wa.me/5511999999999" class="bg-white text-green-600 font-bold py-2 px-4 rounded-lg hover:bg-gray-100 transition">
+                CHAMAR AGORA
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Simple script to toggle FAQ answers
+        document.querySelectorAll('.bg-white button').forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+                const icon = button.querySelector('i');
+                
+                answer.classList.toggle('hidden');
+                icon.classList.toggle('transform');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+
+        // Before/After slider functionality
+        document.querySelectorAll('.before-after-slider').forEach(slider => {
+            let isDragging = false;
+            
+            slider.addEventListener('mousedown', (e) => {
+                isDragging = true;
+                e.preventDefault();
+            });
+            
+            document.addEventListener('mousemove', (e) => {
+                if (!isDragging) return;
+                
+                const container = slider.parentElement;
+                const containerRect = container.getBoundingClientRect();
+                let newWidth = ((e.clientX - containerRect.left) / containerRect.width) * 100;
+                
+                // Limit between 10% and 90%
+                newWidth = Math.max(10, Math.min(90, newWidth));
+                
+                slider.style.width = `${newWidth}%`;
+                slider.previousElementSibling.style.clipPath = `inset(0 ${100 - newWidth}% 0 0)`;
+            });
+            
+            document.addEventListener('mouseup', () => {
+                isDragging = false;
+            });
+            
+            // For touch devices
+            slider.addEventListener('touchstart', (e) => {
+                isDragging = true;
+                e.preventDefault();
+            });
+            
+            document.addEventListener('touchmove', (e) => {
+                if (!isDragging) return;
+                
+                const container = slider.parentElement;
+                const containerRect = container.getBoundingClientRect();
+                let newWidth = ((e.touches[0].clientX - containerRect.left) / containerRect.width) * 100;
+                
+                // Limit between 10% and 90%
+                newWidth = Math.max(10, Math.min(90, newWidth));
+                
+                slider.style.width = `${newWidth}%`;
+                slider.previousElementSibling.style.clipPath = `inset(0 ${100 - newWidth}% 0 0)`;
+            });
+            
+            document.addEventListener('touchend', () => {
+                isDragging = false;
+            });
+        });
+    </script>
+</body>
+</html>
